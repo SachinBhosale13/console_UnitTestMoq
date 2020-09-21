@@ -13,9 +13,7 @@ namespace ConsoleAppTest
         public MyClass(IArg data)
         {
             _data = data;
-        }
-
-        public MyClass(){ }
+        }        
 
         public bool CheckArgument(string[] args)
         {
