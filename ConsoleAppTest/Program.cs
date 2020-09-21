@@ -10,18 +10,25 @@ namespace ConsoleAppTest
     {
         static void Main(string[] args)
         {
-            //MyClass myClass = new MyClass();
+            try
+            {
+                MyClass myClass = new MyClass();
 
-            //bool result = myClass.CheckArgument(args);
+                bool result = myClass.CheckArgument(args);
 
-            //if (result)
-            //{
-            //    Console.WriteLine("Arguments passed.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Argument not passed.");
-            //}
+                if (result)
+                {
+                    Console.WriteLine("Arguments passed.");
+                }
+                else
+                {
+                    Console.WriteLine("Argument not passed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

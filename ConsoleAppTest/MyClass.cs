@@ -13,11 +13,24 @@ namespace ConsoleAppTest
         public MyClass(IArg data)
         {
             _data = data;
-        }        
+        }
+
+        public MyClass()
+        {
+
+        }
 
         public bool CheckArgument(string[] args)
         {
-            return _data.CheckArgument(args);
+            try
+            {
+                return _data.CheckArgument(args);
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
