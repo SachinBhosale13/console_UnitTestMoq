@@ -12,9 +12,9 @@ namespace ConsoleAppTest
         {
             try
             {
-                MyClass myClass = new MyClass();
+                ArgumentClass objArg = new ArgumentClass();
 
-                bool result = myClass.CheckArgument(args);
+                bool result = objArg.CheckArgument(args);
 
                 if (result)
                 {

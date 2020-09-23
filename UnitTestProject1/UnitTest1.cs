@@ -13,15 +13,15 @@ namespace UnitTestProject1
         {
             var mock = new Mock<IArg>();
 
-            string[] args = {  };
+            string[] args = { "abc","xyz"  };
 
-            mock.Setup(p => p.CheckArgument(args)).Returns(false);
+            mock.Setup(p => p.CheckArgument(args)).Returns(true);
 
             MyClass objMyClass = new MyClass(mock.Object);
 
             var ActualOutput = objMyClass.CheckArgument(args);
 
-            Assert.AreEqual(false, ActualOutput);
+            Assert.AreEqual(true, ActualOutput);
         }
     }
 }
